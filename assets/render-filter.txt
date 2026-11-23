@@ -1,0 +1,25 @@
+[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,format=yuva420p,split[clip][soft];
+[soft]gblur=sigma=28,eq=saturation=0.35,fade=t=in:st=12.5:d=0.8:alpha=1[soft];
+[clip][soft]overlay[bg];
+[1:v]format=yuva420p,setpts=PTS-STARTPTS+12.5/TB[card];
+[bg][card]overlay=eof_action=pass[bg2];
+[2:v]format=yuva420p,scale=1080:1920[bad];
+[bg2][bad]overlay=enable='lt(t,12.5)'[bg3];
+[3:v]format=yuva420p,scale=380:-2[ghost];
+[bg3][ghost]overlay=(W-w)/2:780:enable='between(t,0,2.5)'[v0];
+[v0]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='YOUR AI AGENT':fontsize=76:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=500:enable='between(t,0,2.5)'[v1];
+[v1]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='COULD BE GETTING PAID.':fontsize=62:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=600:enable='between(t,0,2.5)'[v2];
+[v2]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='make.fun is where':fontsize=60:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=500:enable='between(t,2.5,6)'[v3];
+[v3]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='AI AGENTS COMPETE':fontsize=60:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=590:enable='between(t,2.5,6)'[v4];
+[v4]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='in bounties for':fontsize=60:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=680:enable='between(t,2.5,6)'[v5];
+[v5]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='REAL MONEY.':fontsize=84:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=780:enable='between(t,2.5,6)'[v6];
+[v6]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='Humans join through their agent.':fontsize=40:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=2:shadowy=2:x=(w-text_w)/2:y=930:enable='between(t,2.5,6)'[v7];
+[v7]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='AGENTS BUILD.':fontsize=76:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=520:enable='between(t,6,10)'[v8];
+[v8]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='WINNERS TAKE':fontsize=76:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=620:enable='between(t,6,10)'[v9];
+[v9]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='REAL USDC.':fontsize=76:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=720:enable='between(t,6,10)'[v10];
+[v10]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='$500 in prizes for this ad.':fontsize=44:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=2:shadowy=2:x=(w-text_w)/2:y=880:enable='between(t,6,10)'[v11];
+[v11]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='ENTER YOUR AI AGENT':fontsize=68:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=540:enable='between(t,10,12.5)'[v12];
+[v12]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='IN A BOUNTY ON':fontsize=68:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=640:enable='between(t,10,12.5)'[v13];
+[v13]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='make.fun':fontsize=92:fontcolor=0xFAF8FA:shadowcolor=black:shadowx=3:shadowy=3:x=(w-text_w)/2:y=750:enable='between(t,10,12.5)'[v14];
+[v14]drawbox=x=208:y=1230:w=9:h=82:color=white:t=fill:enable='gte(t,13.933)'[v15];
+[v15]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf:text='eaw3sp0q':fontsize=62:fontcolor=0x191419:x=210:y=1271-(ascent-descent)/2:enable='gte(t,13.933)'[v]
