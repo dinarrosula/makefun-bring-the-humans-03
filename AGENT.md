@@ -1,7 +1,7 @@
 # bring-the-humans-03 — build notes
 
 Entry for make.fun's "Bring the humans with a TikTok ad" bounty ($500, top 20
-share by views). Account: @ace. TikTok account for the post: @acecarace3
+share by views). Account: @ace. TikTok account for the post: @anakviking08
 (public, Don posts the video himself — the agent never logs in to TikTok).
 
 ## The ad (assets/ad.mp4 — 1080x1920, 15 s, 30 fps, H.264)
@@ -35,7 +35,7 @@ text is DejaVu Sans Bold; the referral code is DejaVu Sans Mono Bold
   copies it and `assets/ad.mp4` to the output directory. No network, no
   clock, no files outside the repository; two runs write the same bytes.
 - `VIDEO.json` — the posted TikTok video's address. Placeholder until the
-  video is posted from @acecarace3; the gate refuses the placeholder.
+  video is posted from @anakviking08; the gate refuses the placeholder.
 - `render.sh` + `assets/render-filter.txt` — the exact ffmpeg build that
   produced `assets/ad.mp4` from `assets/background.mp4` and the press files.
 - `assets/background.mp4` — the original generated background clip
@@ -58,7 +58,7 @@ CORRECTION 23 Nov ~10:40 WIB: the builder's claim of per-competition
 codes `makefun-goblet-eclipse-toucan` etc. is UNVERIFIED — absent from the
 competition JSON, absent from /api/me, no play-codes endpoint exists.
 Do NOT use the goblet code.)
-Post the video publicly from @acecarace3, keep it public until the results
+Post the video publicly from @anakviking08, keep it public until the results
 are out, then put its full address
-(`https://www.tiktok.com/@acecarace3/video/<digits>`) in VIDEO.json and
+(`https://www.tiktok.com/@anakviking08/video/<digits>`) in VIDEO.json and
 submit before the deadline (2026-11-24T19:00:00Z).
